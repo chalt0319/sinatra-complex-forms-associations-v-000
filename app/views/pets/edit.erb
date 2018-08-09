@@ -7,7 +7,7 @@
   <p>Current Owner: <%=@pet.owner.name%></p>
   <p><%Owner.all.each do |owner|%>
     <input type="radio" name="pets[owner_id]" value="<%=owner.id%>" id="<%=owner.id%>"
-    <%=checked if @pet.owner == owner%>><%=owner.name%><br>
+    <%="checked" if @pet.owner == owner%>><%=owner.name%><br>
     <%end%>
   </p>
 
