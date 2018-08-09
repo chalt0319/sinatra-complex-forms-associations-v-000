@@ -5,7 +5,7 @@
   <p>You can choose from our list of existing Owners: </p>
   <p><%Owner.all.each do |owner|%>
     <ul>
-      <li><input type="checkbox" name="pets[owner_id][]" value="<%=owner.id%>"></li>
+      <li><input type="checkbox" name="pets[owner_id][]" value="<%=owner.id%>" id="<%=owner.id%>"></li>
 
     </ul>
     <%end%>
