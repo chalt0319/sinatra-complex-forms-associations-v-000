@@ -5,7 +5,7 @@
   <p>Pet Name: <input type="text" name="pets[name]" id="pet_name"></p>
   <p>You can choose ONE from our list of existing Owners: </p>
   <p><%Owner.all.each do |owner|%>
-    <input type="radio" name="pets[owner_id]" value="<%=owner.id%>" id="<%=owner.id%>" 
+    <input type="radio" name="pets[owner_id]" value="<%=owner.id%>" id="<%=owner.id%>"
     <%=checked if @pet.owner == owner%>><%=owner.name%><br>
     <%end%>
   </p>
