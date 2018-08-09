@@ -2,4 +2,12 @@
 
 <form action="/pets/<%=@pet.id%>/edit'" method="post">
   <p>Pet Name: <input type="text" name="pet[name]" id="pet_name"></p>
+  <p>You can choose ONE from our list of existing Owners: </p>
+  <p><%Owner.all.each do |owner|%>
+    <input type="checkbox" name="pets[owner_id]" value="<%=owner.id%>" <%='checked' if @pet.owner.include?(owner)%> id="<%=owner.id%>"><%=owner.name%><br>
+    <%end%>
+  </p>
+  <p>Or you can create a new Owner:</p>
+  <p>Owner name: <input type="text" name="owner[name]" id="owner_name"></p>
+  <p><input type="submit" id="Create Pet">Create Pet</p>
 </form>
