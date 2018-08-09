@@ -9,7 +9,6 @@
     <%=checked if @pet.owner == owner%>><%=owner.name%><br>
     <%end%>
   </p>
-  <%=@pet.owner.name%>
   <p>Or you can create a new Owner:</p>
   <p>Owner name: <input type="text" name="owner[name]" id="owner_name"></p>
   <p><input type="submit" id="Update Pet"></p>
